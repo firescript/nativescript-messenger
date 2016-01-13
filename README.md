@@ -19,14 +19,14 @@ After you have a reference to the module you can then call the available methods
 
 #### sendMessage: open the OS specific SMS view inside your app
 ##### Parameters
-* number: SMS number to use.
-* message: String to send. - Not supported on iOS at this time.
+* number: Phone number to use.
+* message: The text you want populated in the body.
 
 For example, the code below opens the sms app for the provided number:
 
 ```js
 var messenger = require( "nativescript-messenger" );
-messenger.sendMessage("905-454-1234");
+messenger.singleMessage("905-454-1234", "My message");
 ```
 
 ####groupMessage: open an SMS group chat - (Currently only supported on iOS)
