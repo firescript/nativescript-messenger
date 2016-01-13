@@ -1,78 +1,32 @@
-# NativeScript Phone
+# NativeScript Messenger
 
-A NativeScript module providing phone actions for Android and iOS.
+A NativeScript module providing messaging actions for Android and iOS.
 
 ## Installation
 
-Run `npm install nativescript-phone --save` from your project's `app` directory:
-
-```
-.
-├── app  <------------------------------ run npm install from here
-│   ├── App_Resources
-│   │   ├── android
-│   │   └── ios
-│   ├── app.css
-│   ├── app.js
-│   ├── main-page.js
-│   ├── main-page.xml
-│   ├── node_modules
-│   │   └── nativescript-phone <-- The install will place the module's code here
-│   │       └── ...
-│   └── package.json <----------------- The install will register “nativescript-phone” as a dependency here
-│   └── tns_modules
-│       └── ...
-└── platforms
-    ├── android
-    └── ios
-```
-
-As is, using npm within NativeScript is still experimental, so it's possible that you'll run into some issues. A more complete solution is in the works, and you can check out [this issue](https://github.com/NativeScript/nativescript-cli/issues/362) for an update on its progress and to offer feedback.
-
-If npm doesn't end up working for you, you can just copy and paste this repo's phone-common.js, phone.android.js, and phone.ios.js files into your app and reference them directly.
-
-### Android
-
-To dial the phone without user interaction on Android your app must request permission to dial. To do so, add the following line to your project's AndroidManifest.xml:
-
-```xml
-<uses-permission android:name="android.permission.CALL_PHONE" />
-```
 
 ## Usage
 
-To use the phone module you must first `require()` it from your project's `node_modules` directory:
+To use the phone module you must first `require()` it.
 
 ```js
-var phone = require( "nativescript-phone" );
+var messenger = require( "nativescript-messenger" );
 ```
 
 After you have a reference to the module you can then call the available methods.
 
 ### Methods
-#### dial: initiate a phone call
-##### Parameters
-* telNum: Phone number to dial.
-* prompt: Boolean to enable OS specific confirmation before dialing.
 
-For example, the code below dials the number without showing the device specific confirmation prompt:
-
-```js
-// my-page.js
-var phone = require( "nativescript-phone" );
-phone.dial("212-555-1234",false);
-```
-#### sms: open the OS specific SMS app
+#### sendMessage: open the OS specific SMS view inside your app
 ##### Parameters
-* smsNum: SMS number to use.
-* messageText: String to send. - Not supported on iOS at this time.
+* number: SMS number to use.
+* message: String to send. - Not supported on iOS at this time.
 
 For example, the code below opens the sms app for the provided number:
 
 ```js
-// my-page.js
-var phone = require( "nativescript-phone" );
-phone.sms("212-555-1234");
+var messenger = require( "nativescript-messenger" );
+messenger.sendMessage("212-555-1234");
 ```
 
 ####groupMessage: open an SMS group chat - (Currently only supported on iOS)
@@ -82,9 +36,9 @@ This method is probably a better choice, even for single recipients if you want 
 * message: The body message that is being sent to group.
 
 ```js
-// my-page.js
-var phone = require( "nativescript-phone" );
-phone.groupMessage("212-555-1234", "My message");
+var messenger = require( "nativescript-messenger" );
+var numbers = ["905-555-1234", "905-454-4321", "905-929-1122"];
+messenger.groupMessage(numbers, "My message");
 ```
 
 This method also returns a promise. Use as so to define actions after the user has either canceled or sent the message.
