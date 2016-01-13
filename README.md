@@ -8,7 +8,7 @@ Run `tns plugin add nativescript-messenger`
 
 ## Usage
 
-To use the phone module you must first `require()` it.
+To use the messenger module you must first `require()` it.
 
 ```js
 var messenger = require( "nativescript-messenger" );
