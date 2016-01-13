@@ -1,6 +1,6 @@
 {
   "name": "nativescript-messenger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A SMS Messenger NativeScript module for Android and iOS",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,7 @@
       "email": "steve@sitefinitysteve.com",
       "url": "https://github.com/sitefinitysteve"
     }
-  ],  
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/firescript/nativescript-messenger/blob/master/LICENSE"
@@ -30,6 +30,5 @@
     "url": "https://github.com/firescript/nativescript-messenger/issues"
   },
   "homepage": "https://github.com/firescript/nativescript-messenger",
-  "nativescript": { }
-
+  "nativescript": {}
 }
