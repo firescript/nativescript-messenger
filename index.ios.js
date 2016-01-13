@@ -18,8 +18,6 @@ var CustomMessageCompositeViewControllerDelegate = NSObject.extend({
     messageComposeViewControllerDidFinishWithResult: function(controller, result) {
         
         controller.dismissModalViewControllerAnimated(true);
-        
-        console.log(result);
 
         if(result == MessageComposeResultCancelled) {
             console.log("Message Cancelled.");
@@ -47,7 +45,7 @@ var CustomMessageCompositeViewControllerDelegate = NSObject.extend({
     protocols: [MFMessageComposeViewControllerDelegate]
 });
 
-function groupMessage(numbers, message, subject) {
+function send(numbers, message, subject) {
     
     return new Promise(function (resolve, reject) {  
         
@@ -82,10 +80,4 @@ function groupMessage(numbers, message, subject) {
     });   
 }
 
-function singleMessage(number, message, subject){
-    var sendNumber = [number];
-    groupMessage(sendNumber, message, subject);
-}
-
-exports.groupMessage = groupMessage;
-exports.singleMessage = singleMessage;
+exports.send = send;
