@@ -26,13 +26,13 @@ var messenger = require( "nativescript-messenger" );
 ```js
 var messenger = require( "nativescript-messenger" );
 var numbers = ["905-454-1234", "905-454-4321", "905-929-1122"];
-messenger.groupMessage(numbers, "My message", "Subject of Message");
+messenger.send(numbers, "My message", "Subject of Message");
 ```
 
 This method also returns a promise. Use as so to define actions after the user has either canceled or sent the message.
 
 ```js
-    phone.groupMessage(["905-555-5555", "905-555-4444"], "this is body").then(function(args){
+    messenger.send(["905-555-5555", "905-555-4444"], "this is body").then(function(args){
         console.log(args.response); 
         // either a string saying cancelled or sent
         console.log(args.message); 
