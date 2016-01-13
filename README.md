@@ -26,7 +26,7 @@ For example, the code below opens the sms app for the provided number:
 
 ```js
 var messenger = require( "nativescript-messenger" );
-messenger.sendMessage("212-555-1234");
+messenger.sendMessage("905-454-1234");
 ```
 
 ####groupMessage: open an SMS group chat - (Currently only supported on iOS)
@@ -37,8 +37,8 @@ This method is probably a better choice, even for single recipients if you want 
 
 ```js
 var messenger = require( "nativescript-messenger" );
-var numbers = ["905-555-1234", "905-454-4321", "905-929-1122"];
-messenger.groupMessage(numbers, "My message");
+var numbers = ["905-454-1234", "905-454-4321", "905-929-1122"];
+messenger.groupMessage(numbers, "My message", "Subject of Message");
 ```
 
 This method also returns a promise. Use as so to define actions after the user has either canceled or sent the message.
