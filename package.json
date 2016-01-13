@@ -1,6 +1,6 @@
 {
   "name": "nativescript-messenger",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A SMS Messenger NativeScript module for Android and iOS",
   "main": "index.js",
   "repository": {
@@ -11,6 +11,17 @@
     "NativeScript"
   ],
   "author": "Ryan  Lebel <ryan@firescript.ca> ",
+  "contributors": [
+    {
+      "name": "Ivan Buhov",
+      "url": "https://github.com/ivanbuhov"
+    },
+    {
+      "name": "Steve McNiven-Scott",
+      "email": "steve@sitefinitysteve.com",
+      "url": "https://github.com/sitefinitysteve"
+    }
+  ],  
   "license": {
     "type": "MIT",
     "url": "https://github.com/firescript/nativescript-messenger/blob/master/LICENSE"

@@ -1,6 +1,6 @@
 # NativeScript Messenger
 
-A NativeScript module providing sms messaging action for Android and iOS.
+A NativeScript module providing an sms messaging action for Android and iOS.
 
 ## Installation
 
