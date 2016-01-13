@@ -55,7 +55,9 @@ function send(numbers, message, subject) {
                 
                 if(numbers && numbers.constructor === Array){
                     controller.recipients = numbers;   
-                }            
+                } else {
+                    reject(Error("You must provide an array with number(s) as strings."));                    
+                }        
                 if(message){
                     controller.body = message;   
                 }           
