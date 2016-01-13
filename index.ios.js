@@ -53,7 +53,7 @@ function send(numbers, message, subject) {
             var controller = MFMessageComposeViewController.alloc().init();
             if(controller != null){
                 
-                if(numbers){
+                if(numbers && numbers.constructor === Array){
                     controller.recipients = numbers;   
                 }            
                 if(message){

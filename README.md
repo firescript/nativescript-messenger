@@ -1,9 +1,10 @@
 # NativeScript Messenger
 
-A NativeScript module providing messaging actions for Android and iOS.
+A NativeScript module providing sms messaging action for Android and iOS.
 
 ## Installation
 
+Run `tns plugin add nativescript-messenger`
 
 ## Usage
 
@@ -13,27 +14,14 @@ To use the phone module you must first `require()` it.
 var messenger = require( "nativescript-messenger" );
 ```
 
-After you have a reference to the module you can then call the available methods.
+### Method
 
-### Methods
+####send: Sends a message to one or multiple recipients
 
-#### sendMessage: open the OS specific SMS view inside your app
-##### Parameters
-* number: Phone number to use.
-* message: The text you want populated in the body. 
-
-For example, the code below opens the sms app for the provided number:
-
-```js
-var messenger = require( "nativescript-messenger" );
-messenger.singleMessage("905-454-1234", "My message");
-```
-
-####groupMessage: open an SMS group chat - (Currently only supported on iOS)
-This method is probably a better choice, even for single recipients if you want to define a message body.
 ##### Parameters
 * numbers: An array of phone number strings. Supports just one or multiple.
-* message: The body message that is being sent to group.
+* message: The body message.
+* subject: The subject message.
 
 ```js
 var messenger = require( "nativescript-messenger" );
