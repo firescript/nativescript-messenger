@@ -8,7 +8,9 @@
     "url": "https://github.com/firescript/nativescript-messenger"
   },
   "keywords": [
-    "NativeScript"
+    "NativeScript",
+    "SMS",
+    "Messenger"
   ],
   "author": "Ryan  Lebel <ryan@firescript.ca> ",
   "contributors": [
