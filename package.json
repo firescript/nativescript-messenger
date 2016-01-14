@@ -1,6 +1,6 @@
 {
   "name": "nativescript-messenger",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A SMS Messenger NativeScript module for Android and iOS",
   "main": "index.js",
   "repository": {
