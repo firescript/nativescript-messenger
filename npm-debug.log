@@ -3,7 +3,7 @@
 2 info using npm@2.14.7
 3 info using node@v4.2.2
 4 verbose publish [ '.' ]
-5 verbose stack Error: Invalid version: "1.1"
+5 verbose stack Error: Invalid version: "1.2"
 5 verbose stack     at Object.module.exports.fixVersionField (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:186:13)
 5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:32:38
 5 verbose stack     at Array.forEach (native)
@@ -18,7 +18,7 @@
 8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
 9 error node v4.2.2
 10 error npm  v2.14.7
-11 error Invalid version: "1.1"
+11 error Invalid version: "1.2"
 12 error If you need help, you may report this error at:
 12 error     <https://github.com/npm/npm/issues>
 13 verbose exit [ 1, true ]
