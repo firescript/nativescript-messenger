@@ -1,7 +1,7 @@
 {
   "name": "nativescript-messenger",
   "version": "1.0.13",
-  "description": "A SMS Messenger NativeScript module for Android and iOS",
+  "description": "A SMS Messenger NativeScript module for Android and iOS and Android",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,12 @@
   "keywords": [
     "NativeScript",
     "SMS",
-    "Messenger"
+    "Messenger",
+    "iOS",
+    "Android",
+    "Text Messaging",
+    "Group Message",
+    "Group Messaging"
   ],
   "author": "Ryan  Lebel <ryan@firescript.ca> ",
   "contributors": [
@@ -22,7 +27,12 @@
       "name": "Steve McNiven-Scott",
       "email": "steve@sitefinitysteve.com",
       "url": "https://github.com/sitefinitysteve"
-    }
+    },
+    {
+      "name": "Osei Fortune",
+      "email": "fortune.osei@yahoo.com",
+      "url": "https://github.com/triniwiz"
+    }    
   ],
   "license": {
     "type": "MIT",
