@@ -1,16 +1,19 @@
-var application = require("application");
-
-function send(phoneNumber, message, subject) {
-    
+function send(numbers, message, subject) {
     return new Promise(function (resolve, reject) {
-            
-        if(phoneNumber && phoneNumber.constructor === Array){
-            var theNumber = phoneNumber[0].toString();
+        if(Array.isArray(numbers)){
+            const numList = numbers.map((n,i)=>{
+                if(i === numbers.length - 1){
+                    return n;
+                }else{
+                    return n+','
+                }
+            }).join("");
             try {
                 var intent = new android.content.Intent(android.content.Intent.ACTION_VIEW);
-                intent.setData(android.net.Uri.parse("sms:" + theNumber));
+                intent.setData(android.net.Uri.parse("smsto:" + numList));
                 intent.putExtra("sms_body", message);
-                application.android.foregroundActivity.startActivity(intent);
+                intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
+                com.tns.NativeScriptApplication.getInstance().startActivity(intent);
                 console.log("Message Sent.");
                 resolve({
                     response: "sent",
